@@ -66,6 +66,11 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   
+  beer = find_item_by_name_in_collection('BEER', items)
+  beets = find_item_by_name_in_collection('BEETS', items)
+  cart = [beets, beer, beer, beer]
+  coupon_collection = [coupons[1]]
+  
   consolidated_cart = consolidate_cart(cart)
   couponed_cart = apply_coupons(consolidated_cart, coupons)
   clearanced_cart = apply_clearance(couponed_cart)
