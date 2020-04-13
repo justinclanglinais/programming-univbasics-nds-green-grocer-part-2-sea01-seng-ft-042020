@@ -21,7 +21,7 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-def apply_clearance(cart)
+def apply_clearance(cart, array)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
