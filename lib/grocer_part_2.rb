@@ -52,6 +52,7 @@ def checkout(cart, coupons)
     sum = 0 
     price.each do | i |
       sum += i
+    end
     return price
   end
   # binding.pry
