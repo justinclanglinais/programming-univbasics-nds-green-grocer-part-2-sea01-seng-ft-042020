@@ -47,6 +47,7 @@ def checkout(cart, coupons)
   couponed_cart = apply_coupons(consolidated_cart, coupons)
   clearanced_cart = apply_clearance(couponed_cart)
   price = []
+  binding.pry 
   clearanced_cart.each do | items |
     price << (items[:price] * items[:count])
     sum = 0 
