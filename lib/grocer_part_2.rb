@@ -1,6 +1,7 @@
 require_relative './part_1_solution.rb'
 require 'pry'
 
+describe "Grocer" do
 let(:items) do
     [
       {:item => "AVOCADO", :price => 3.00, :clearance => true},
@@ -23,6 +24,7 @@ let(:items) do
       {:item => "CHEESE", :num => 3, :cost => 15.00}
     ]
   end
+end
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
