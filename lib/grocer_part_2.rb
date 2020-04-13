@@ -8,7 +8,7 @@ def apply_coupons(cart, coupons)
   cart.each do | items |
     coupons.each do | coupon_items |
       if coupon_items[:item] == items[:item]
-        if items[:count]  coupon_items[:num] - 1
+        if items[:count] > coupon_items[:num] - 1
           items[:count] = items[:count] - coupon_items[:num]
           cart << {
           :item => "#{items[:item]} W/COUPON",
