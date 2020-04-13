@@ -29,7 +29,7 @@ def apply_clearance(cart)
     if items[:clearance] == true 
       items[:price] = (items[:price].to_f * 0.80).round(2)
     else
-      items[:price] = items[:price]
+      items[:price]
     end 
   end
 end
