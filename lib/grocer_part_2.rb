@@ -50,7 +50,8 @@ def checkout(cart, coupons)
   clearanced_cart.each do | items |
     price << (items[:price] * items[:count])
     sum = 0 
-    price.each | i | { i += sum }
+    price.each do | i |
+      sum += i
     return price
   end
   # binding.pry
