@@ -58,7 +58,7 @@ def checkout(cart, coupons)
     sum += i
   end
   if sum > 100
-    return (sum * .90).round(2)
+    return (sum.to_f * .90).round(2)
   end
   return sum
   # binding.pry
